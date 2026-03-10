@@ -1,6 +1,21 @@
 # gotify
 
 
+go
+
+gotify.wasm and
+gotify capabilities into tools/gotify
+under .ironclaw
+
+
+after you run build.sh
+
+in /home/sun/ironclaw/ironclaw-gotify-tool
+
+all in repo
+
+
+
 
 ## Getting started
 
