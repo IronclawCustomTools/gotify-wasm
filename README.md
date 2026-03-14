@@ -10,6 +10,14 @@ under .ironclaw
 
 after you run build.sh
 
+or dont use build.sh its not great
+instead
+do this:
+cargo build --release --target wasm32-wasip2
+cp target/wasm32-wasip2/release/gotify_tool.wasm ~/.ironclaw/tools/gotify.wasm
+^
+gg
+
 in /home/sun/ironclaw/ironclaw-gotify-tool
 
 all in repo

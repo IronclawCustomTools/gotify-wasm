@@ -19,6 +19,7 @@ use exports::near::agent::tool;
 struct SendInput {
     #[serde(default = "default_title")]
     title: String,
+    #[serde(default = "default_message")]
     message: String,
     #[serde(default = "default_priority")]
     priority: i32,
@@ -26,6 +27,10 @@ struct SendInput {
 
 fn default_title() -> String {
     "Kageho".to_string()
+}
+
+fn default_message() -> String {
+    "Notification from Kageho".to_string()
 }
 
 fn default_priority() -> i32 {
@@ -83,20 +88,33 @@ impl tool::Guest for GotifyTool {
         .to_string()
     }
 
-    fn description() -> String {
-        "Send a push notification via Gotify. Use this to notify the user about completed tasks, alerts, reminders, or any important information.".to_string()
+fn description() -> String {
+        "Send a push notification via Gotify. Parameters (JSON object): message (string, REQUIRED), title (string, default: Kageho), priority (integer: 1-3=low, 5-7=medium, 8-10=high, default: 3). Example: {\"message\": \"hello\", \"priority\": 5}".to_string()
     }
 }
 
 // ── Logic ───────────────────────────────────────────────────────
 
 fn dispatch(params_json: &str) -> Result<String, String> {
-    let params: SendInput =
-        serde_json::from_str(params_json).map_err(|e| format!("Bad input: {e}"))?;
+    let params: SendInput = match serde_json::from_str(params_json) {
+        Ok(p) => p,
+        Err(_) => {
+            let trimmed = params_json.trim().trim_matches('"');
+            let msg = if !trimmed.is_empty() && trimmed != "{}" {
+                trimmed.to_string()
+            } else {
+                default_message()
+            };
+            SendInput {
+                title: default_title(),
+                message: msg,
+                priority: default_priority(),
+            }
+        }
+    };    
 
-    // Check secrets exist in the encrypted vault
     if !near::agent::host::secret_exists("gotify_app_token") {
-        return Err("Secret 'gotify_app_token' not configured. Run: python3 insert_secret.py gotify_app_token <token>".into());
+        return Err("Secret 'gotify_app_token' not configured.".into());
     }
 
     let msg = GotifyMessage {
@@ -112,13 +130,12 @@ fn dispatch(params_json: &str) -> Result<String, String> {
         &format!("Sending Gotify notification: {}", msg.title),
     );
 
-    // Host injects the real token from the encrypted vault
     let headers = serde_json::json!({
         "Content-Type": "application/json"
     });
-    // Host replaces ${gotify_url} with the decrypted value
-    //let url = "${gotify_url}/message";
+
     let url = "https://gotify.darkc.sobe.world/message";
+
     let response = near::agent::host::http_request(
         "POST",
         url,

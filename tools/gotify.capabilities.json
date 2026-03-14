@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "tools": [
     {
-      "name": "gotify_send",
-      "description": "Send a push notification via Gotify. Use this to notify the user about completed tasks, alerts, reminders, or any important information.",
+      "name": "gotify",
+      "description": "Send a push notification via Gotify. Parameters (JSON object): message (string, REQUIRED), title (string, default: Kageho), priority (integer: 1-3=low, 5-7=medium, 8-10=high, default: 3). Example: {\"message\": \"hello\", \"priority\": 5}",
       "parameters": {
         "type": "object",
         "properties": {
@@ -24,25 +24,38 @@
             "default": 3
           }
         },
-        "required": ["message"]
+        "required": [
+          "message"
+        ]
       }
     }
   ],
   "capabilities": {
     "http": {
       "allowlist": [
-        {"host": "gotify.darkc.sobe.world", "path_prefix": "/"}
+        {
+          "host": "gotify.darkc.sobe.world",
+          "path_prefix": "/"
+        }
       ],
       "credentials": {
         "gotify": {
           "secret_name": "gotify_app_token",
-          "location": {"type": "header", "name": "X-Gotify-Key"},
-          "host_patterns": ["gotify.darkc.sobe.world"]
+          "location": {
+            "type": "header",
+            "name": "X-Gotify-Key"
+          },
+          "host_patterns": [
+            "gotify.darkc.sobe.world"
+          ]
         }
       }
     },
     "secrets": {
-      "allowed_names": ["gotify_app_token", "gotify_url"]
+      "allowed_names": [
+        "gotify_app_token",
+        "gotify_url"
+      ]
     }
   },
   "setup": {

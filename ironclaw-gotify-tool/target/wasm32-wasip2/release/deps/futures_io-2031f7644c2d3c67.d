@@ -1,0 +1,7 @@
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/wasm32-wasip2/release/deps/futures_io-2031f7644c2d3c67.d: /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs
+
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/wasm32-wasip2/release/deps/libfutures_io-2031f7644c2d3c67.rlib: /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs
+
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/wasm32-wasip2/release/deps/libfutures_io-2031f7644c2d3c67.rmeta: /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs
+
+/home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/futures-io-0.3.32/src/lib.rs:

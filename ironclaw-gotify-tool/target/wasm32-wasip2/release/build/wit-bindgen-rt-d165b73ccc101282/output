@@ -1,0 +1,2 @@
+cargo:rustc-link-lib=static=wit_bindgen_cabi_realloc0_41_0
+cargo:rustc-link-search=native=/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/wasm32-wasip2/release/build/wit-bindgen-rt-d165b73ccc101282/out

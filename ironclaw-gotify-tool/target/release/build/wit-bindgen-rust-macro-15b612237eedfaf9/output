@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=build.rs
+cargo:rustc-env=DEBUG_OUTPUT_DIR=/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/build/wit-bindgen-rust-macro-15b612237eedfaf9/out

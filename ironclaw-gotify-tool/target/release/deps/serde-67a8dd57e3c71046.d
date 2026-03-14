@@ -1,0 +1,14 @@
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/deps/serde-67a8dd57e3c71046.d: /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/build/serde-5e190ad692f8347c/out/private.rs
+
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/deps/libserde-67a8dd57e3c71046.rlib: /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/build/serde-5e190ad692f8347c/out/private.rs
+
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/deps/libserde-67a8dd57e3c71046.rmeta: /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/build/serde-5e190ad692f8347c/out/private.rs
+
+/home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/ironclaw/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/build/serde-5e190ad692f8347c/out/private.rs:
+
+# env-dep:OUT_DIR=/home/ironclaw/ironclaw/ironclaw-gotify-tool/target/release/build/serde-5e190ad692f8347c/out
